@@ -21,21 +21,7 @@
 └── README.md
 ```
 
-## Quick start (bq CLI)
-```bash
-# Set default project
-gcloud config set project logistics-thesis
 
-# Create dataset (adjust if you already have it)
-bq --location=europe-west3 mk --dataset logistics-thesis:logistic
-
-# Execute SQL files
-bq query --location=europe-west3 --use_legacy_sql=false < sql/01_create_table.sql
-bq query --location=europe-west3 --use_legacy_sql=false < sql/02_views.sql
-
-# Run validation
-bq query --location=europe-west3 --use_legacy_sql=false < sql/90_validation_queries.sql
-```
 
 
 
